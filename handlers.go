@@ -4,6 +4,7 @@ import (
   "encoding/json"
   "fmt"
   "net/http"
+  "html"
 
   "github.com/gorilla/mux"
 )
