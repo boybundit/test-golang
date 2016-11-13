@@ -9,7 +9,8 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintln(w, "Welcome!")
+  fmt.Fprintln(w, "Welcome!<br>")
+  fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
