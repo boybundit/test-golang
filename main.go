@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"fmt"
 	"html"
 	"log"
@@ -12,6 +13,6 @@ func main() {
 		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 	})
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("HTTP_PLATFORM_PORT"), nil))
 
 }
