@@ -10,7 +10,7 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintln(w, "Welcome!<br>")
+  fmt.Fprintln(w, "Welcome!")
   fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 }
 
